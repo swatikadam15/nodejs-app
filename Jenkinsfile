@@ -42,16 +42,12 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh '''
-                kubectl version --client
-                kubectl get nodes
                 
                 sed -i "s/latest/${TAG}/g" deployment.yaml
                 kubectl apply -f deployment.yaml 
                 kubectl apply -f service.yaml 
 
-          
-
-                kubectl rollout status deployment/nodejs-deployment
+                kubectl rollout status deployment/reverse-deployment
                 '''
             }
         }

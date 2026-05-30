@@ -2,15 +2,15 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: nodejs-service
+  name: reverse-service
 
 spec:
   type: ClusterIP
 
   selector:
-    app: nodejs-app
+    app: reverse-app
 
   ports:
   - protocol: TCP
     port: 3001
-    targetPort: 3001
+    targetPort: 3000
