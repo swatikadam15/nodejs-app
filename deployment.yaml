@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: nodejs-container
-        image: swatikadam16/nodejs-k8s-app:v1
+        image: swatikadam16/nodejs-k8s-app:latest
 
         ports:
         - containerPort: 3001
