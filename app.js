@@ -1,13 +1,22 @@
-const express = require('express');
-
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello from Kubernetes Cluster!');
+app.get("/", (req, res) => {
+    res.send("Welcome to Home Page");
 });
 
-const PORT = 3000;
+app.get("/users", (req, res) => {
+    res.send("Users Page");
+});
 
-app.listen(PORT, () => {
-    console.log(`Application running on port ${PORT}`);
+app.get("/products", (req, res) => {
+    res.send("Products Page");
+});
+
+app.get("/orders", (req, res) => {
+    res.send("Orders Page");
+});
+
+app.listen(3000, () => {
+    console.log("Application running on port 3000");
 });

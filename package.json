@@ -1,7 +1,6 @@
 {
-  "name": "nodejs-k8s-app",
+  "name": "nodejs-ingress-demo",
   "version": "1.0.0",
-  "description": "Simple Node.js Kubernetes App",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"

@@ -4,7 +4,7 @@ pipeline {
         githubPush()
     }
     environment {
-        IMAGE = "swatikadam16/node-app"
+        IMAGE = "swatikadam16/node-reverse-proxy"
         TAG = "${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
 
         // KUBECONFIG = "/home/ubuntu/.kube/config"
